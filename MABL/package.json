@@ -1,0 +1,15 @@
+{
+  "name": "mabl",
+  "version": "1.0.1",
+  "description": "Proyecto para comprender los conceptos de java scrip",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melanie Brochero",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fgithub.com%2Fces1-2020-sac%2Festudiantes"
+  }
+}
