@@ -1,0 +1,19 @@
+{
+  "name": "estudiantes",
+  "version": "1.0.0",
+  "description": "Proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ces1-2020-sac/estudiantes.git"
+  },
+  "author": "DaviDiosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ces1-2020-sac/estudiantes/issues"
+  },
+  "homepage": "https://github.com/ces1-2020-sac/estudiantes#readme"
+}
