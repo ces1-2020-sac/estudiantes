@@ -11,10 +11,10 @@ numero2 = 300
 
 suma = numero1 + numero2;
 
-console.log("La suma de "+numero1+" y "+numero2+" es "+suma)
-console.log(`la suma de ${numero1} y ${numero2} es ${suma}`)
+//console.log("La suma de "+numero1+" y "+numero2+" es "+suma)
+//console.log(`la suma de ${numero1} y ${numero2} es ${suma}`)
 
-imprimirImpares1al100();
+ImprimirDosNumerosAB();
 //esPar(4);
 //esPar(8);
 //esPar(20);
@@ -23,7 +23,9 @@ imprimirImpares1al100();
 //esPar(45);
 
 //imprimir(3, 4, 56);
-imprimir(numero1, numero2, suma);
+
+// imprimir(numero1, numero2, suma);
+
 
 function imprimir (numero1, numero2, suma){
     console.log("La suma de " + numero1 + " y " + numero2 + " es " + suma)
@@ -53,18 +55,19 @@ function imprimirNumeros1al100(){
     }     
 }
 
+
 //crear una función que me reciba dos numeros y si los dos numeros son pares, vas a retonar la suma.
 
 numeroA = 2
 numeroB = 4
 
-function DosNumerosAB(){
+function ImprimirDosNumerosAB(){
     let numA = 2, numB = 4;
-    if (numA% 2 == 0 & numB% 2 == 0){
-        console.log(`suma: ${numA + numB}`)
-    }else if (numA% 2 == 1 & numB% 2 == 1){
-    console.log(`Resta: ${numA-numB}`)
-}else{
+    if (numA% 2 == 0 & numB % 2 == 0){
+        console.log(`Resta: ${numA-numB}`)
+    }else if (numA% 2 == 1 & numB % 2 == 1){
+    console.log(`Suma: ${numA+numB}`)
+    }else{
     console.log(`Multiplicación: ${numA*numB}`)
 }
 }
