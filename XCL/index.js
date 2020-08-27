@@ -1,6 +1,61 @@
-/**
- * 1. git add. ---> Este comando nos sirve para adicionar archivos o carpetas nuevas
- *                  al stage o a la version local de mi equipo.
- * 2. git commit -m "comentario del commit" --> Este comando nos sirve para adicionar los cambios 
- *                                        nuevos a un nuevo commit que enviaremos al repositorio
- */hola
+var numero1;
+let numero2;
+const PI = 3.1416;
+
+numero1 = 33
+numero2 = 300
+
+suma = numero1 + numero2;
+
+DosNumeros();
+//esPar(4);
+//esPar(8);
+//esPar(20);
+//esPar(5);
+//esPar(9);
+//esPar(45);
+
+// imprimir(3, 4, 56);
+// imprimir(numero1, numero2, suma);
+
+function imprimir(numero1, numero2, suma) {
+    console.log("La suma de " + numero1 + " y " + numero2 + " es " + suma)
+    console.log(`La suma de ${numero1} y ${numero2} es ${suma}`);
+}
+
+function esPar(suma) {
+    if (suma % 2 == 0) {
+        console.log(`${suma} Es un numero par`)
+    } else {
+        console.log(`${suma} Es un numero impar`)
+    }
+}
+
+function imprimirImpares1al100() {
+    for (contador = 1; contador <= 100; contador += 2) {
+        console.log(contador);
+    }
+}
+
+function imprimirNumeros1al100() {
+    let contador = 1;
+    while (contador <= 100) {
+        console.log(contador)
+        //contador = contador + 1;
+        contador++;
+    }
+}
+
+//Recibir 2 números, preguntar si son pares retornar la suma, si son impares retornar o imprimir la resta, sino retornar la multiplicación.
+
+function DosNumeros() {
+    let Num1 = 4, Num2 = 3;
+    if (Num1% 2 == 0 & Num2 % 2 == 0){
+        console.log(`Suma: ${Num1+Num2}`)
+    }else if (Num1% 2 == 1 & Num2 % 2 == 1){
+        console.log(`Resta: ${Num1-Num2}`)
+    }else{
+        console.log(`Multiplicación: ${Num1*Num2}`)
+    }
+}
+
