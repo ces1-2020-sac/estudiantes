@@ -52,3 +52,19 @@ function imprimirNumeros1al100(){
     contador++;
     }     
 }
+
+//crear una función que me reciba dos numeros y si los dos numeros son pares, vas a retonar la suma.
+
+numeroA = 2
+numeroB = 4
+
+function DosNumerosAB(){
+    let numA = 2, numB = 4;
+    if (numA% 2 == 0 & numB% 2 == 0){
+        console.log(`suma: ${numA + numB}`)
+    }else if (numA% 2 == 1 & numB% 2 == 1){
+    console.log(`Resta: ${numA-numB}`)
+}else{
+    console.log(`Multiplicación: ${numA*numB}`)
+}
+}
