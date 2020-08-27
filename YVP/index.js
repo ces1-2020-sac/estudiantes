@@ -46,6 +46,8 @@ function imprimirNumeros1al100() {
     }
 }
 
+//Recibir 2 números, preguntar si son pares retornar la suma, si son impares retornar o imprimir la resta, sino retornar la multiplicación.
+
 function DosNumeros() {
     let num1 = 3, num2 = 7;
     if (num1% 2 == 0 & num2 % 2 == 0){
