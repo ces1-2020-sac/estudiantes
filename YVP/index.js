@@ -1,4 +1,5 @@
 import {PI, DosNumeros} from './Funciones/misfunciones.js'
+import {Moto} from './clases/Moto.js'
 var numero1;
 let numero2;
 var suma;
@@ -8,9 +9,15 @@ numero1 = 33
 numero2 = 300
 
 suma = numero1 + numero2;
-console.log("PI vale " + PI);
+let akt = new Moto(4, 6);
+let yamaha = new Moto(4, 5);
+yamaha.rodar()
+console.log(akt)
+console.log(yamaha)
 
-DosNumeros();
+// console.log("PI vale " + PI);
+
+// DosNumeros();
 //esPar(4);
 //esPar(8);
 //esPar(20);
