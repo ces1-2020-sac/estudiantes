@@ -6,7 +6,7 @@
 /*VARIABLES*/
 
 var numero1;
-let numero2,
+let numero2;
 const PI = 3.1416;
 //con esots comandos se declara una variable (var, let, const)//
 //Para poner a correr las varibales, utilizamos "node .\index.js" //
@@ -61,7 +61,7 @@ imprimirImpares1al100();
 
 
 function imprimirImpares1al100(){
-    for(contador = 1; contaador <= 100; contador= contador + 2){
+    for(let contador = 1; contador <= 100; contador= contador + 2){
         console.log(contador);
     }
 }
@@ -76,22 +76,22 @@ function ImprimirNumeros1al100(){
     }
 }
 
-/*Crea una fucnión que reciba dos números un N1 o N2 ó A y B. Preguntar si los dos número son pares, se reotna la suma. Si los dos número son impares retorna la resta y si no se cumple esas dos regles la mulplicación de los dos*/
+/**Crea una fucnión que reciba dos números un N1 o N2 ó A y B. Preguntar si los dos número son pares, 
+ * se reotna la suma. Si los dos número son impares retorna la resta y si 
+ * no se cumple esas dos regles la mulplicación de los dos*/
 
 
-N1yN2();
+N1yN2(3,5);
 
 
-function N1yN2(){
-    var N1 = 1;
-    var N2 = 6;
+function N1yN2(N1, N2){
+   // var N1 = 1;
+   // var N2 = 6;
 
-    if (N1 % 2 == 0 & N2 % 2 == 0){
+    if (N1 % 2 == 0 && N2 % 2 == 0){
         console.log(`suma: ${N1 + N2}`)
-
-    }else if(N1 % 2 == 0 & N2 & 2 == 0){
+    }else if(N1 % 2 != 0 && N2 % 2 != 0){
         console.log(`resta: ${N1 - N2}`)
-        
     }else{
         console.log(`multiplicacion: ${N1 * N2}`)
     }
