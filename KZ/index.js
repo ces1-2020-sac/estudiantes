@@ -5,49 +5,25 @@
 
 /*VARIABLES*/
 
+import {PI} from `./funciones/misfunciones.js`
+console.log("El valor de PI es" +PI)
+
 var numero1;
 let numero2;
-const PI = 3.1416;
+
+
 //con esots comandos se declara una variable (var, let, const)//
 //Para poner a correr las varibales, utilizamos "node .\index.js" //
 
 numero1 = 100;
 numero2 = 300;
 
+
 suma = numero1 + numero2;
-console.log("La suma de "+numero1+"  y "+numero2+" es "+suma)
-console.log(`La suma de ${numero1} y ${numero2} es ${suma}`)
+console.log("PI vale:" + PI)
 
 
-
-function imprimir(numero1, numero2, suma) {
-    console.log("la suma de " + numero1 + " y " + numero2 + " es " + suma);
-    console.log(`la suma de ${numero1} y ${numero2}  es ${suma}`);
-}
-
-
-if (suma % 2 == 0) {
-    console.log(`${suma} es un numero par`)
-} else {
-    console.log(`${suma} es un nuemro impar`)
-}
-
-
-function esPar(suma) {
-    if (suma % 2 == 0) {
-        console.log(`${suma} es un numero par`)
-    } else {
-        console.log(`${suma} es un nuemro impar`)
-    }
-}
-
-esPar (5)
-function imprimir(numero1, numero2, suma){
-    console.log("la suma de "+numero1+"  y "+numero2+" es "+suma)
-    console.log(`La suma de ${numero1} y ${numero2} es ${suma}`);
-}
-
-imprimirImpares1al100();
+//imprimirImpares1al100();
 
 //esPar(5);
 //esPar(4);
@@ -60,39 +36,11 @@ imprimirImpares1al100();
 //imprimir los numeros del 1 al 100//
 
 
-function imprimirImpares1al100(){
-    for(let contador = 1; contador <= 100; contador= contador + 2){
-        console.log(contador);
-    }
-}
 
-
-function ImprimirNumeros1al100(){
-    let contador=1;
-    while(contador <= 100){
-
-        console.log(contador);
-        contador = contador + 1;
-    }
-}
-
-/**Crea una fucnión que reciba dos números un N1 o N2 ó A y B. Preguntar si los dos número son pares, 
- * se reotna la suma. Si los dos número son impares retorna la resta y si 
+/**Crea una fucnión que reciba dos números un N1 o N2 ó A y B. Preguntar si los dos número son pares,
+ * se reotna la suma. Si los dos número son impares retorna la resta y si
  * no se cumple esas dos regles la mulplicación de los dos*/
 
 
-N1yN2(3,5);
 
 
-function N1yN2(N1, N2){
-   // var N1 = 1;
-   // var N2 = 6;
-
-    if (N1 % 2 == 0 && N2 % 2 == 0){
-        console.log(`suma: ${N1 + N2}`)
-    }else if(N1 % 2 != 0 && N2 % 2 != 0){
-        console.log(`resta: ${N1 - N2}`)
-    }else{
-        console.log(`multiplicacion: ${N1 * N2}`)
-    }
-} 
