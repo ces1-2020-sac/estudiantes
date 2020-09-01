@@ -5,7 +5,8 @@
 
 /*VARIABLES*/
 
-import {} from `./funciones/misfunciones.js`
+import {PI} from `./funciones/misfunciones.js`
+console.log("El valor de PI es" +PI)
 
 var numero1;
 let numero2;
@@ -19,7 +20,7 @@ numero2 = 300;
 
 
 suma = numero1 + numero2;
-console.log("PI vale:" +PI)
+console.log("PI vale:" + PI)
 
 
 //imprimirImpares1al100();
@@ -36,24 +37,10 @@ console.log("PI vale:" +PI)
 
 
 
-/**Crea una fucnión que reciba dos números un N1 o N2 ó A y B. Preguntar si los dos número son pares, 
- * se reotna la suma. Si los dos número son impares retorna la resta y si 
+/**Crea una fucnión que reciba dos números un N1 o N2 ó A y B. Preguntar si los dos número son pares,
+ * se reotna la suma. Si los dos número son impares retorna la resta y si
  * no se cumple esas dos regles la mulplicación de los dos*/
 
 
-/*N1yN2(3,5);
 
-
-function N1yN2(N1, N2){
-   // var N1 = 1;
-   // var N2 = 6;
-
-    if (N1 % 2 == 0 && N2 % 2 == 0){
-        console.log(`suma: ${N1 + N2}`)
-    }else if(N1 % 2 != 0 && N2 % 2 != 0){
-        console.log(`resta: ${N1 - N2}`)
-    }else{
-        console.log(`multiplicacion: ${N1 * N2}`)
-    }
-} */
 
