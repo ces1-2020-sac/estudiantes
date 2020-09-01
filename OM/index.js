@@ -1,13 +1,21 @@
+import {PI,imprimiNumeros1al100, imprimirImpares1al100, sumar} from './funciones/misfunciones.js'
+import {Moto} from './clases/Moto.js'
 var numero1;
 let numero2, suma;
-const PI = 3.1416;
 
 numero1 = 33;
 numero2 = 300;
 
 suma = numero1 + numero2;
+let akt = new Moto(4, 6);
+let yamaha = new Moto(5, 4);
+yamaha.rodar()
+console.log(akt)
+console.log(yamaha)
 
-imprimiNumeros1al100();
+//console.log("PI vale " + PI);
+// imprimirImpares1al100();
+// console.log("la suma de 3 y 5 es "  + sumar(3, 5));
 /*esPar(4);
 esPar(40);
 esPar(8);
@@ -22,30 +30,5 @@ imprimir(3, 4, 56);
 imprimir(numero1, numero2, suma); */
 
 
-function imprimir(numero1, numero2, suma) {
-    console.log("La suma de " + numero1 + ' y ' + numero2 + " es " + suma);
-    console.log(`La suma de ${numero1} y ${numero2} es ${suma}`);
-}
 
-function esPar(suma) {
-    if (suma % 2 == 0) {
-        console.log(`${suma} es un numero par`)
-    } else {
-        console.log(`${suma} es un numero impar`)
-    }
-}
 
-function imprimirImpares1al100(){
-    for(contador = 1; contador <= 100; contador += 2){
-        console.log(contador);
-    }
-}
-
-function imprimiNumeros1al100(){
-    let contador = 1;
-    while(contador <= 100){
-        console.log(contador);
-        //contador = contador + 1;
-        contador++;
-    }
-}
