@@ -61,3 +61,18 @@ function imprimirNumeros1al100(){
 //crear una funcion que me reciba dos numeros, que me reciba un N1 o N2 ó A y B. y preguntar 
 // si los dos numeros son pares, retornar la suma. Si los dos numeros son impares retornar
 // la resta y mostrarla. Si no cumplen esas dos reglas retornar la multiplicación de los dos.//*/
+
+Numero1y2();
+//Desarrollo//*/
+
+function Numero1y2(){
+    let numero1 = 1
+    let numero2 = 9;
+    if (numero1 % 2 == 0 & numero2 % 2 == 0){
+        console.log(`suma: ${numero1 + numero2}`)
+    }else if(numero1 % 2 == 0 & numero2 & 2 == 0){
+        console.log(`resta: ${numero1 - numero2}`)
+    }else{
+        console.log(`multiplicacion: ${numero1 * numero2}`)
+    }
+}
