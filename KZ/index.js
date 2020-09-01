@@ -5,12 +5,12 @@
 
 /*VARIABLES*/
 
-import {PI} from `./funciones/misfunciones.js`
-console.log("El valor de PI es" +PI)
+import {PI} from "./funciones/misfunciones.js"
+console.log("El valor de PI es " +PI)
 
 var numero1;
 let numero2;
-
+let suma;
 
 //con esots comandos se declara una variable (var, let, const)//
 //Para poner a correr las varibales, utilizamos "node .\index.js" //
@@ -20,7 +20,7 @@ numero2 = 300;
 
 
 suma = numero1 + numero2;
-console.log("PI vale:" + PI)
+console.log("PI vale: " + PI)
 
 
 //imprimirImpares1al100();
