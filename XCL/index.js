@@ -1,13 +1,20 @@
+import {PI} from "./funciones/misfunciones.js"
+import {Moto} from './clases/Moto.js'
 var numero1;
-let numero2;
-const PI = 3.1416;
+let numero2, suma;
 
-numero1 = 33
-numero2 = 300
+numero1 = 33;
+numero2 = 300;
 
 suma = numero1 + numero2;
+let akt = new Moto(4, 6);
+let yamaha = new Moto(5, 4);
+yamaha.rodar()
+console.log(akt)
+console.log(yamaha)
+// console.log("PI vale:" + PI)
 
-DosNumeros();
+//DosNumeros();
 //esPar(4);
 //esPar(8);
 //esPar(20);
@@ -18,44 +25,17 @@ DosNumeros();
 // imprimir(3, 4, 56);
 // imprimir(numero1, numero2, suma);
 
-function imprimir(numero1, numero2, suma) {
-    console.log("La suma de " + numero1 + " y " + numero2 + " es " + suma)
-    console.log(`La suma de ${numero1} y ${numero2} es ${suma}`);
-}
-
-function esPar(suma) {
-    if (suma % 2 == 0) {
-        console.log(`${suma} Es un numero par`)
-    } else {
-        console.log(`${suma} Es un numero impar`)
-    }
-}
-
-function imprimirImpares1al100() {
-    for (contador = 1; contador <= 100; contador += 2) {
-        console.log(contador);
-    }
-}
-
-function imprimirNumeros1al100() {
-    let contador = 1;
-    while (contador <= 100) {
-        console.log(contador)
-        //contador = contador + 1;
-        contador++;
-    }
-}
 
 //Recibir 2 números, preguntar si son pares retornar la suma, si son impares retornar o imprimir la resta, sino retornar la multiplicación.
 
-function DosNumeros() {
-    let Num1 = 4, Num2 = 3;
-    if (Num1% 2 == 0 & Num2 % 2 == 0){
-        console.log(`Suma: ${Num1+Num2}`)
-    }else if (Num1% 2 == 1 & Num2 % 2 == 1){
-        console.log(`Resta: ${Num1-Num2}`)
-    }else{
-        console.log(`Multiplicación: ${Num1*Num2}`)
-    }
-}
+// //Ejercico correcion
+//N1yN2(1, 6);
+//function N1yN2(N1, N2) {
+    // if (N1 % 2 == 0 && N2 % 2 == 0) {
+    //     console.log(`suma: ${N1 + N2}`)
+    // } else if (N1 % 2 != 0 && N2 % 2 != 0)
+    //     console.log(`resta: ${N1 - N2}`)
+    //     } else {
+    //     console.log(`mueltiplicacion: ${N1 * N2}`)
+    //     }
 
