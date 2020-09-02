@@ -36,3 +36,4 @@ console.log(yamaha)
 
 
 //Modificación Nueva
+//Modificación Index y Clases
