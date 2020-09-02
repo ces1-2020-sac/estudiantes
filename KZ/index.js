@@ -38,7 +38,7 @@ console.log(yamaha)
 //imprimir los números del 1 al 100
 
 
-
+//Terminado
 
 
 
