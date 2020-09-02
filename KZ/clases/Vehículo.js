@@ -1,5 +1,5 @@
 //Característica y propiedades de un atributo (color,número de llantas...) de una clase
-export class Vehiculo {
+export class Vehículo {
     color = ""
     numLlantes = 0
     numAsientos = 0
@@ -11,7 +11,7 @@ export class Vehiculo {
     }
 
     rodar(){
-        console.log("El vehiculo de color " + this.color + " esta rodando");
+        console.log("El vehículo de color " + this.color + " esta rodando");
     }
 }
 //let audi =new vehículo();
