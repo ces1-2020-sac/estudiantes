@@ -15,7 +15,6 @@ numero1 = 203;
 numero2 = 300;
 
 suma = numero1 + numero2;
-
 let akt = new Moto(4, 6);
 let yamaha = new Moto(5, 4);
 yamaha.rodar()
@@ -36,9 +35,4 @@ console.log(yamaha)
 // imprimir(numero1, numero2, suma);
 
 //imprimir los números del 1 al 100
-
-
-//Terminado
-
-
 
