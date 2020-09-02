@@ -11,8 +11,8 @@ export class Vehiculo {
     }
 
     rodar(){
-        console.log("El vehículo de color " + this.color + " esta rodando");
+        console.log("El vehiculo de color " + this.color + " esta rodando");
     }
 }
-//let audi =new vehículo();
-// Se ejecuta como "node .\clases/Vehículo.js"
+//let audi =new vehiculo();
+// Se ejecuta como "node .\clases/Vehiculo.js"

@@ -1,5 +1,4 @@
-
-export const PI= 3.1416;
+export const PI = 3.1419383;
 
 
 export function imprimir(numero1, numero2, suma) {
@@ -37,6 +36,7 @@ export function ImprimirNumeros1al100(){
  * no se cumple esas dos regles la mulplicación de los dos*/
 
 //N1yN2(3,5);
+
 export function N1yN2(N1, N2){
    // var N1 = 1;
    // var N2 = 6;
