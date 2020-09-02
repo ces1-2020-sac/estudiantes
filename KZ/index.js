@@ -4,7 +4,7 @@
 //con esots comandos se declara una variable (var, let, const)//
 //Para poner a correr las varibales, utilizamos "node .\index.js" //
 
-import { PI, imprimirImpares1al100, imprimirNumeros1al100, N1yN2 } from './funciones/misfunciones.js'
+import {PI,imprimirImpares1al100,imprimirNumeros1al100, N1yN2} from `./funciones/misfunciones.js`
 import { Moto } from './clases/Moto.js'
 
 var numero1;
@@ -21,8 +21,8 @@ yamaha.rodar()
 console.log(akt)
 console.log(yamaha)
 
-//console.log("PI vale " + PI);
-//imprimirImpares1al100();
+console.log("PI vale " + PI);
+imprimirImpares1al100();
 //imprimirNumeros1al100();
 //N1yN2();
 
@@ -34,5 +34,5 @@ console.log(yamaha)
 // imprimir(3, 4, 56);
 // imprimir(numero1, numero2, suma);
 
-//imprimir los números del 1 al 100
+
 
