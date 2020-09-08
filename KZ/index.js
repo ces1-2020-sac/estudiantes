@@ -33,7 +33,3 @@ console.log(yamaha)
 
 // imprimir(3, 4, 56);
 // imprimir(numero1, numero2, suma);
-
-
-//Modificación Nueva
-//Modificación Index y Clases
