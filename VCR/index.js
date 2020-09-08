@@ -1,65 +1,29 @@
+import {PI,imprimiNumeros1al100, imprimirImpares1al100, sumar} from './funciones/misfunciones.js'
+import {Moto} from './clases/Moto.js'
 var numero1;
-let numero2;
-const PI = 3.1416;
+let numero2, suma;
 
-numero1 = 33
-numero2 = 300
+numero1 = 33;
+numero2 = 300;
 
-suma = numero1+numero2
+suma = numero1 + numero2;
+let akt = new Moto(4, 6);
+let yamaha = new Moto(5, 4);
+yamaha.rodar()
+console.log(akt)
+console.log(yamaha)
 
-DosN();
-// imprimir100();
-// imprimirImpares100();
-// par(3)
-// par(456777)
-// par(9)
-// par(344)
-// par(32)
-
-// imprimir (3, 4, 45)
-// imprimir (numero1, numero2, suma)
-
-
-function par(suma) {
-   if(suma%2 == 0){
-    console.log(`${suma} es un numero par`)
-} else {
-    console.log(`${suma} es un numero impar`)
-}
-}
-
-function imprimir(numero1, numero2, suma) {
-    console.log("la suma de "+numero1+" y "+numero2+" es "+suma)
-    console.log(`la suma de ${numero1}y ${numero2} es ${suma}`)
-
-}
-
-function imprimir100() {
-    let contador = 1;
-       while(contador <= 100){
-           console.log(contador)
-        // contador = contador +1;
-        contador++;
-    }
-}
-
-function imprimirImpares100() {
-    for(contador = 1; contador<= 100; contador = contador + 2){
-        console.log(contador);
-    }
-    
-}
-
-// funcion que reciba dos numeros, a y b preguntar si los dos numeros son pares, entonces sale la suma si son impares mostrar la restaa, si son diferentes la multiplicacion
-
-function DosN() {
-    let N1 = 8, N2 = 10;
-    if (N1% 2 == 0 & N2 % 2 == 0){
-        console.log(`la Suma es: ${N1+N2}`)
-    }else if (N1% 2 == 1 & N2 % 2 == 1){
-        console.log(`la Resta es: ${N1-N2}`)
-    }else{
-        console.log(`la Multiplicación es: ${N1*N2}`)
-    }
-}
-//hola
+//console.log("PI vale " + PI);
+// imprimirImpares1al100();
+// console.log("la suma de 3 y 5 es "  + sumar(3, 5));
+/*esPar(4);
+esPar(40);
+esPar(8);
+esPar(41);
+esPar(5);
+esPar(1);
+esPar(0);
+esPar(434534234);
+esPar(437723472734);
+imprimir(3, 4, 56);
+imprimir(numero1, numero2, suma); */
