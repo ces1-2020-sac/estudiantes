@@ -1,8 +1,9 @@
 {
-  "name": "estudiantes",
+  "name": "om",
   "version": "1.0.0",
-  "description": "Proyecto",
+  "description": "Proyecto para comprender conceptos de JavaScrip",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/ces1-2020-sac/estudiantes.git"
   },
-  "author": "DaviDiosa",
+  "author": "Oscar Mesa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ces1-2020-sac/estudiantes/issues"
