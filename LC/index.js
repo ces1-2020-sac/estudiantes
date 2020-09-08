@@ -33,4 +33,19 @@ console.log(yamaha)
 // imprimir(3, 4, 56);
 // imprimir(numero1, numero2, suma);
 
+<<<<<<< HEAD
+function Numero1y2(){
+    let numero1 = 1
+    let numero2 = 9;
+    if (numero1 % 2 == 0 & numero2 % 2 == 0){
+        console.log(`suma: ${numero1 + numero2}`)
+    }else if(numero1 % 2 == 0 & numero2 & 2 == 0){
+        console.log(`resta: ${numero1 - numero2}`)
+    }else{
+        console.log(`multiplicacion: ${numero1 * numero2}`)
+    }
+}
+
+=======
 //imprimir los números del 1 al 100
+>>>>>>> 3a61b0183644be08851bd3da708a1bca610287bc
