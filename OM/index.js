@@ -1,34 +1,28 @@
-import {PI,imprimiNumeros1al100, imprimirImpares1al100, sumar} from './funciones/misfunciones.js'
-import {Moto} from './clases/Moto.js'
-var numero1;
-let numero2, suma;
+const express = require('express')
+const app = express()
 
-numero1 = 33;
-numero2 = 300;
+app.get('/', function(req, res){
+    res.send("Hola Santos Angeles!!!!!")
+})
 
-suma = numero1 + numero2;
-let akt = new Moto(4, 6);
-let yamaha = new Moto(5, 4);
-yamaha.rodar()
-console.log(akt)
-console.log(yamaha)
+app.get('/estudiante/:documento', function(req, res){
+	console.log("El documento es ",  req.params.documento)
+    res.send("Servicio para mostrar un solo estudiante con documenot # " + req.params.documento)
+})
 
-//console.log("PI vale " + PI);
-// imprimirImpares1al100();
-// console.log("la suma de 3 y 5 es "  + sumar(3, 5));
-/*esPar(4);
-esPar(40);
-esPar(8);
-esPar(41);
-esPar(5);
-esPar(1);
-esPar(0);
-esPar(434534234);
-esPar(437723472734);
+/**
+ * Desarrollar un midelware INDIVIDUALMENTE (si es posible) con la siguiente ruta /numerosprimos/:limite
+ * El midelware debe imprimir en el navegador (puede ser un JSON o un string) con los número primos 
+ * hasta el liminte donde se le indico en el parametro (:limite).
+ * Subir todos los cambios a GitHub para su revisión y anexar la url de la carpeta de GitHub en el
+ * ClassRoom de la activivdad propuesta. 
+ */
 
-imprimir(3, 4, 56);
-imprimir(numero1, numero2, suma); */
+app.get('/estudiantes', function(req, res){
+    //res.send("<h1>Servicio para la lista de estudiantes</h1>")
+    res.json({nombre:"oscar", edad : 29})
+})
 
-
-
-
+app.listen(8080, function() {
+    console.log("Servidor escuchando en puerto 8080")
+})
