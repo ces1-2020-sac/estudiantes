@@ -1,7 +1,7 @@
 {
   "name": "vcr",
   "version": "1.0.0",
-  "description": "Proyecto",
+  "description": "Mi primer servidor en Express",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ces1-2020-sac/estudiantes/issues"
   },
-  "homepage": "https://github.com/ces1-2020-sac/estudiantes#readme"
+  "homepage": "https://github.com/ces1-2020-sac/estudiantes#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
