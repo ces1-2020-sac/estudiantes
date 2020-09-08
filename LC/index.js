@@ -76,3 +76,4 @@ function Numero1y2(){
         console.log(`multiplicacion: ${numero1 * numero2}`)
     }
 }
+
