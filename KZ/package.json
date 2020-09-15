@@ -4,7 +4,7 @@
   "description": "Mi primer servidor en Express",
   "main": "index.js",
   "scripts": {
-    "dev" : "nodemon index",
+    "dev": "nodemon index",
     "start": "node index"
   },
   "repository": {
