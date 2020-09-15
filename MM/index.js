@@ -1,40 +1,27 @@
-import {PI, ImprimirDosNumerosAB,imprimirImpares1al100} from "./funciones/misfunciones.js"
+const express = require('express')
+const app = express()
 
-console.log ("El valor de PI es " + PI )
+app.get("/", function(req, res){
+    res.send("Hola Santos Angeles!")
+})
 
-/**
- * 1. git . ---Este comando nos sirva para adicionar archivos o carpetas nuevas al slage o a la versión local de mi equipo.
- * 2. git commint -m "comentario del commit" --- Este comando nos sirve para adicionar los cambios..
- */
-var numero1;
-let numero2, suma;
-//const PI = 3.1416;
-
-numero1 = 33
-numero2 = 300
-
-suma = numero1 + numero2;
-
-//console.log("La suma de "+numero1+" y "+numero2+" es "+suma)
-//console.log(`la suma de ${numero1} y ${numero2} es ${suma}`)
-
-ImprimirDosNumerosAB();
-//esPar(4);
-//esPar(8);
-//esPar(20);
-//esPar(5);
-//esPar(9);
-//esPar(45);
-
-//imprimir(3, 4, 56);
-
-// imprimir(numero1, numero2, suma);
+app.get("/estudiante/:documento", function(req, res){
+    console.log("el documento es ", req.params.documento)
+    res.send("Servicio para mostrar un solo estudiante con documento # " + req.params.documento)
+})
 
 
+  app.get("/estudiantes", function(req, res){
+   //res.send("</h1>Servicio para la lista de estudiantes</h1>")
+    res.json({nombre: "Manuela", edad : 16})
+  })
 
+app.listen(8080, function() {
+    console.log("El servidor está corriendo en puerto")
+})
 
-
-
-
-
-
+//desarrollar un midelware INDIVIDUAL (si es posible) con la siguente ruta /numerosprimos/:limite
+//el midelware debe imprimir en e navegador (puede ser un JSON o un string) con los números primos
+//hasta el limite donde se le indico en el parametro (:limite).
+// Subir todos los cambios a Github para su revisión y anexar la url de la carpeta de Github en el 
+//ClassRoom de la actividad propuesta.
