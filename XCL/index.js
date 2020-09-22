@@ -24,31 +24,19 @@ app.get(`/estudiante/:documento`, function(req,res){
 // hasta el limite donde se le indico el parametro (:limite)
 //subir todos los cambios en el github para su revision y anexar la url de la carpeta del github en el clasrrom de la actividad propesta
 
-app.get(`/numeros`, function(req,res){
-    var c = 100;
-var j = 2;
-var numerosPrimos = [];
-
-for (; j < c; j++) {
-
-  if (primo(j)) {
-    numerosPrimos.push(j);
-  }
-  
-}
-
-console.log(numerosPrimos);
-
-function primo(numero) {
-
-  for (var i = 2; i < numero; i++) {
-
-    if (numero % i === 0) {
-      return false;
+app.get("/numerosprimos/:limite", function(req, res){
+    function Primos(num) {
+        for(var i=2;i<=num-1;i++) {
+            if(num%i==0) {
+                return false;
+            }
+        }
+        return true;
     }
-
-  }
-
-  return numero !== 1;
-}
+    for(var i=1;i<=req.params.limite;i++) {
+        if(Primos(i)) {
+            console.log(i);
+        }
+    }
+    res.json("números primos hasta el: " + req.params.limite)
 })

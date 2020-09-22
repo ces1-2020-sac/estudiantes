@@ -1,29 +1,42 @@
-import {PI,imprimiNumeros1al100, imprimirImpares1al100, sumar} from './funciones/misfunciones.js'
-import {Moto} from './clases/Moto.js'
-var numero1;
-let numero2, suma;
+const express = require('express')
+const app = express()
 
-numero1 = 33;
-numero2 = 300;
 
-suma = numero1 + numero2;
-let akt = new Moto(4, 6);
-let yamaha = new Moto(5, 4);
-yamaha.rodar()
-console.log(akt)
-console.log(yamaha)
+// desarrollar un midelware individual, con la ruta: /numerosprimos/:limite. debe imprimir en el navegador (json o string) con los numeros primos hasta el limite donde se le indico en el parametro (:limite), subir todos los cambios a github para su revision y anexar la url de la carpeta de git hub en el classroom de la actividad propuesta
 
-//console.log("PI vale " + PI);
-// imprimirImpares1al100();
-// console.log("la suma de 3 y 5 es "  + sumar(3, 5));
-/*esPar(4);
-esPar(40);
-esPar(8);
-esPar(41);
-esPar(5);
-esPar(1);
-esPar(0);
-esPar(434534234);
-esPar(437723472734);
-imprimir(3, 4, 56);
-imprimir(numero1, numero2, suma); */
+//intento
+app.get('/numerosprimos/:limite', function (req, res) {
+    function Primos(n) {
+        for(var i=2;i<=n-1;i++) {
+            if(n%i==0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    for(var i=1;i<=req.params.limite;i++) {
+        if(Primos(i)) {
+            console.log(i);
+        }
+    }
+    res.json("números primos hasta: " + req.params.limite)
+})
+
+app.get('/', function (req, res) {
+    res.send('Holaa!!!!')
+})
+
+app.get('/estudiantes/:documento', function (req, res) {
+    console.log('el documento es', req.params)
+    res.send('Servicio para mostrar un solo estudiante con documento # ' + req.params.documento)
+})
+
+app.get('/estudiantes', function (req, res) {
+    //res.send('<h1>Servicio para los estudiantes</h1>')
+    res.json({ nombre: "Valentina", edad: 16 })
+})
+
+app.listen(8080, function () {
+    console.log('El servidor esta corriendo en un puerto :)')
+
+})
