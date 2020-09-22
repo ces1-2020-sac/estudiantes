@@ -1,60 +1,44 @@
-var numero1;
-let numero2;
-const PI = 3.1416;
+const express = require('express')
+const app = express()
 
-numero1 = 33
-numero2 = 300
+app.get("/", function(req, res){
+    res.send("Hola Santos Ángeles Custodios :)")
+})
 
-suma = numero1 + numero2;
+app.get("/estudiante/:documento", function(req, res){
+    console.log("El documento es ", req.params)
+    res.send("Servicio para mostrar un solo estudiante con documento # " + req.params.documento)
+})
 
-DosNumeros();
-//esPar(4);
-//esPar(8);
-//esPar(20);
-//esPar(5);
-//esPar(9);
-//esPar(45);
+app.get("/estudiantes", function(req, res){
+    //res.send("Servicio para la lista de estudiantes")
+    res.json({nombre:"Yuliana", edad : 15})
+})
 
-// imprimir(3, 4, 56);
-// imprimir(numero1, numero2, suma);
+app.listen(8080, function() {
+    console.log("Servidor escuchando en puerto 8080")
+})
 
-function imprimir(numero1, numero2, suma) {
-    console.log("La suma de " + numero1 + " y " + numero2 + " es " + suma)
-    console.log(`La suma de ${numero1} y ${numero2} es ${suma}`);
-}
+/* 
+TAREA
+Desarrollar un midelware INDIVIDUALMENTE (si es posible) con la siguiente ruta /numerosprimos/:limite (hasta donde los quiero imprimir)
+El midelware debe imprimir en el navegador (puede ser un JSON o un string) con los números primos hasta el límite donde se le indico en el parametro (:limite).
+Subir todos los cambios a Github para su revision y anexar la url de la carpeta de GitHub en el classroom de la actividad propuesta
+*/
 
-function esPar(suma) {
-    if (suma % 2 == 0) {
-        console.log(`${suma} es un numero par`)
-    } else {
-        console.log(`${suma} es un numero impar`)
+app.get("/numerosprimos/:limite", function(req, res){
+    function Primos(num) {
+        for(var i=2;i<=num-1;i++) {
+            if(num%i==0) {
+                return false;
+            }
+        }
+        return true;
     }
-}
-
-function imprimirImpares1al100() {
-    for (contador = 1; contador <= 100; contador += 2) {
-        console.log(contador);
+    for(var i=1;i<=req.params.limite;i++) {
+        if(Primos(i)) {
+            console.log(i);
+        }
     }
-}
-
-function imprimirNumeros1al100() {
-    let contador = 1;
-    while (contador <= 100) {
-        console.log(contador)
-        //contador = contador + 1;
-        contador++;
-    }
-}
-
-//Recibir 2 números, preguntar si son pares retornar la suma, si son impares retornar o imprimir la resta, sino retornar la multiplicación.
-
-function DosNumeros() {
-    let num1 = 3, num2 = 7;
-    if (num1% 2 == 0 & num2 % 2 == 0){
-        console.log(`Suma: ${num1+num2}`)
-    }else if (num1% 2 == 1 & num2 % 2 == 1){
-        console.log(`Resta: ${num1-num2}`)
-    }else{
-        console.log(`Multiplicación: ${num1*num2}`)
-    }
-}
+    res.json("números primos hasta el: " + req.params.limite)
+})
