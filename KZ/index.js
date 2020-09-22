@@ -1,7 +1,7 @@
 const express = require(`express`)
-const { json } = require("express")
+//const { json } = require("express")
 const app = express()
-const json = require ("numerosprimos")
+//const json = require ("numerosprimos")
 
 app.get("/", function (req, res) {
     res.send("Hola Santos Angeles...")
@@ -26,8 +26,9 @@ app.listen(8080, function () {
 /*El midelware debe imprimir en el navegador (puede ser un JSON o un string) con los número primos 
 hasta el liminte donde se le indico en el parametro (:limite)*/
 
-app.get("/numerosprimos/:1 al 100", function (req, res) {
-    console.log("Los números primos del 1 al 100 son ", req.params.numerosprimos)
+app.get("/numerosprimos/:limite", function (req, res) {
+    console.log("Los números primos del 1 al 100 son ", req.params.limite)
+    
     res.json("Servicio para mostrar los números primos")
 
 })
