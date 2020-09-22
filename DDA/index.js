@@ -12,7 +12,7 @@ app.get("/estudiante/:documento", function(req, res){
 
 app.get("/estudiantes", function(req, res){
     //res.send("Servicio para la lista de estudiantes")
-    res.json({nombre:"Yuliana", edad : 15})
+    res.json({nombre:"David", edad : 16})
 })
 
 app.listen(8080, function() {
