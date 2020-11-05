@@ -25,3 +25,10 @@ app.listen(8080, function() {
 //hasta el limite donde se le indico en el parametro (:limite).
 // Subir todos los cambios a Github para su revisión y anexar la url de la carpeta de Github en el 
 //ClassRoom de la actividad propuesta.
+
+app.get("/numerosprimos/:limite", function(req, res){
+  console.log("los numeros primos del 1 al 100 son ", req.params.limite)
+
+  res.json("servicio para mostrar los números primos")
+
+})
