@@ -1,35 +1,51 @@
-// 1. git add . --- Este comando nos sirve para adicionar archivos o carpetas nuevas al stage o a la version local de mi equipo.
-//2. git commit -m ""Comenario de commit--- Este comando nos sirve para adicionar los cambios nuevos o nuevo commit que enviaremos al respositorio.
+const express = require(`express`)
+//const { json } = require("express")
+const app = express()
+//const json = require ("numerosprimos")
 
-//con esots comandos se declara una variable (var, let, const)//
-//Para poner a correr las varibales, utilizamos "node .\index.js" //
+app.get("/", function (req, res) {
+    res.send("Hola Santos Angeles...")
+})
 
-import { PI, imprimirImpares1al100, N1yN2,ImprimirNumeros1al100 } from './funciones/misfunciones.js'
-import { Moto } from './clases/Moto.js'
+app.get("/estuudiante/:documento", function (req, res) {
+    console.log("El documento es ", req.params.documento)
+    res.send("Servicio para mostrar un solo estudiante")
 
-var numero1;
-let numero2;
-let suma;
+})
 
-numero1 = 203;
-numero2 = 300;
+app.get("/estuudiantes", function (req, res) {
+    res.send("Servicio para la lista de estantes")
+    //res.json ({nombre:katherine})
+})
 
-suma = numero1 + numero2;
-let akt = new Moto(4, 6);
-let yamaha = new Moto(5, 4);
-yamaha.rodar()
-console.log(akt)
-console.log(yamaha)
+app.listen(8080, function () {
+    console.log("El servidor esta corriedno en un puerto 8080")
+})
 
-//console.log("PI vale " + PI);
-//imprimirImpares1al100();
-//imprimirNumeros1al100();
-//N1yN2();
 
-// esPar(5);
-// esPar(4);
-// esPar(47);
-// esPar(400);
+/*Desarrollar un midelware en express INDIVIDUALMENTE (si es posible) con la siguiente ruta /numerosprimos/:limite
+/*El midelware debe imprimir en el navegador (puede ser un JSON o un string) con los número primos 
+hasta el liminte donde se le indico en el parametro (:limite)*/
 
-// imprimir(3, 4, 56);
-// imprimir(numero1, numero2, suma);
+app.get("/numerosprimos/:limite", function (req, res) {
+    console.log("Los números primos del 1 al 100 son ", req.params.limite)
+    var n1, numerosprimos;
+    n1= parseInt (prompt ("introduce un numero"));
+    i=0;
+    numerosprimos=true;
+
+    for (i=2; i<n1; i++){
+        if (n1& i==0){
+            numerosprimos = false;
+        }
+    }
+
+    if (numerosprimos==true) {
+        document.write ("El numero "+n1+" es primo");
+    }else{
+        document.write ("El numero "+n1+" no es primo");
+    }
+
+    res.json("Servicio para mostrar los números primos")
+
+})
