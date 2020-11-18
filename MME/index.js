@@ -23,7 +23,7 @@ app.get('/numerosprimos/:limite', function (req, res) {
 })
 
 app.get('/', function (req, res) {
-    res.send('Holaa!!!!')
+    res.send('Holaa!!!')
 })
 
 app.get('/estudiantes/:documento', function (req, res) {

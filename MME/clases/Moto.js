@@ -5,7 +5,7 @@ export class Moto extends Vehiculo{
     torke = 0
     
     constructor(cilindraje, torke){
-        super("negra", 2, 2)
+        super("roja", 2, 2)
         this.cilindraje =  cilindraje
         this.torke = torke
     }
