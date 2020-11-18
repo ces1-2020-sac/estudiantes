@@ -1,0 +1,25 @@
+{
+    "name": "gm",
+    "version": "1.0.0",
+    "description": "Mi primer servidor en Express",
+    "main": "index.js",
+    "scripts": {
+      "dev" : "nodemon index",
+      "start": "node index"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ces1-2020-sac/estudiantes.git"
+    },
+    "author": "Gissell Montes",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/ces1-2020-sac/estudiantes/issues"
+    },
+    "homepage": "https://github.com/ces1-2020-sac/estudiantes#readme",
+    "dependencies": {
+      "express": "^4.17.1",
+      "nodemon": "^2.0.4"
+    }
+  }
+  
